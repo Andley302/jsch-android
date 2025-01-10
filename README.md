@@ -60,7 +60,7 @@ Ao iniciar a conexão, o serviço `tunfd` do Android é ativado, o que permite a
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/andley302/jsch-android.git
+   git clone https://github.com/Andley302/jsch-android.git
    ```
    
 2. Abra o projeto no Android Studio e faça as configurações necessárias para o seu dispositivo.

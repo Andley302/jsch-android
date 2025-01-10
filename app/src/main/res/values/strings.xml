@@ -1,0 +1,55 @@
+<resources>
+<string name="app_name">vpn jsch</string>
+
+    <string name="app_mobile_info">App Version: %1$s %2$s</string>
+
+    <string name="ok">Ok</string>
+    <string name="unknown_state">Unknown state</string>
+    <string name="error_request_permission">Error request permission</string>
+    <string name="cancel">Cancel</string>
+    <string name="starting_notification">Starting VPN...</string>
+    <string name="state_vpn_running">VPN Running!</string>
+    <string name="permission_icon_app">Icon permission</string>
+    <string name="remote_warning">Warning</string>
+    <string name="remote_trust">Trust</string>
+    <string name="action_about">About</string>
+    <string name="knownhosts"></string>
+    <string name="app_no_longer_exists">App not found</string>
+    <string name="import_file">Import Config</string>
+    <string name="export_file">Export Config</string>
+    <string name="export_sucess">Sucess!</string>
+    <string name="erro_save_file">Error to save file!</string>
+    <string name="error_file_config_incompatible">Incompatible file!</string>
+    <string name="only_disconnected">Disconnect from the VPN first!</string>
+    <string name="file_config_incompatible">Incompatible config file</string>
+    <string name="import_sucess">Success!</string>
+    <string name="import_file_error">Error importing file!</string>
+    <string name="operation_failed">Operation failed!</string>
+    <string name="reset_app_data">Clear app data</string>
+    <string name="reset_app_title">Are you sure you want to clear the settings?</string>
+    <string name="reset_app_txt">Your configuration or the configuration of imported files will be deleted. The app will close after clearing the data</string>
+    <string name="confirm">Ok</string>
+    <string name="reset_app_config">Clear config</string>
+    <string name="reset_app_config_title">Are you sure you want to clear the config?</string>
+    <string name="clear_logs">Clear logs</string>
+    <string name="cleared_logs">Clean logs</string>
+    <string name="force_stop">Force stop</string>
+    <string name="minimize">Minimize</string>
+    <string name="exit">Exit</string>
+
+    <string-array name="connection_modes">
+        <item>HTTP_PROXY</item>
+        <item>HTTP_DIRECT</item>
+        <item>HTTPS_PROXY</item>
+        <item>HTTPS</item>
+    </string-array>
+
+    <string-array name="tls">
+        <item>auto</item>
+        <item>TLSv1</item>
+        <item>TLSv1.1</item>
+        <item>TLSv1.2</item>
+        <item>TLSv1.3</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.vpntest"
+        tools:targetApi="31">
+        <activity
+            android:theme="@style/Theme.Default"
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:label="@string/export_file"
+            android:exported="true"
+            android:name=".configs.ExportConfig"/>
+        <activity
+            android:label="@string/import_file"
+            android:exported="true"
+            android:name=".configs.ImportConfig"
+            android:grantUriPermissions="true"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="*/*"/>
+                <data android:host="*"/>
+                <data android:port="*" tools:ignore="AppLinkUrlError"/>
+                <data android:pathPattern=".*.jsch"/>
+                <data android:pathPattern=".*.bin"/>
+                <data android:pathPattern=".*.enc"/>
+                <data android:pathPattern=".*..*.jsch"/>
+                <data android:pathPattern=".*..*.bin"/>
+                <data android:pathPattern=".*..*.enc"/>
+                <data android:pathPattern=".*..*..*.jsch"/>
+                <data android:pathPattern=".*..*..*.bin"/>
+                <data android:pathPattern=".*..*..*.enc"/>
+                <data android:pathPattern=".*..*..*..*.jsch"/>
+                <data android:pathPattern=".*..*..*..*.bin"/>
+                <data android:pathPattern=".*..*..*..*.enc"/>
+                <data android:pathPattern=".*..*..*..*..*.jsch"/>
+                <data android:pathPattern=".*..*..*..*..*.bin"/>
+                <data android:pathPattern=".*..*..*..*..*.enc"/>
+                <data android:pathPattern=".*..*..*..*..*..*.jsch"/>
+                <data android:pathPattern=".*..*..*..*..*..*.bin"/>
+                <data android:pathPattern=".*..*..*..*..*..*.enc"/>
+                <data android:pathPattern=".*..*..*..*..*..*..*.jsch"/>
+                <data android:pathPattern=".*..*..*..*..*..*..*.bin"/>
+                <data android:pathPattern=".*..*..*..*..*..*..*.enc"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/octetstream"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+                <data android:scheme="file"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.bin"/>
+                <data android:pathPattern=".*\\.enc"/>
+                <data android:pathPattern=".*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\.bin"/>
+                <data android:pathPattern=".*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\.enc"/>
+                <data android:pathPattern=".*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\.enc"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.enc"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.jsch"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.jsch"/>
+            </intent-filter>
+
+        </activity>
+        
+        <service
+            android:name="app.jsch.androidtunnel.notification.NotificationService"
+            android:foregroundServiceType="dataSync"
+            android:enabled="true"
+            android:exported="true"
+            android:label="Notification SSH"
+            android:stopWithTask="false" />
+        <service
+            android:name="app.jsch.androidtunnel.services.connectionservices.ssh.EstablishVPN"
+            android:foregroundServiceType="dataSync"
+            android:exported="true"
+            android:permission="android.permission.BIND_VPN_SERVICE" />
+        <service
+            android:name="app.jsch.androidtunnel.services.connectionservices.ssh.ConnectVPN"
+            android:exported="true" />
+        <service
+            android:name="app.jsch.androidtunnel.services.injector.InjectionService"
+            android:exported="true" />
+
+
+
+    </application>
+
+</manifest>

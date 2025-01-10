@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/black">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:paddingBottom="13dp"
+			android:paddingTop="32dp">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="About vpntest"
+				android:textStyle="bold"
+				android:textSize="25sp"
+				android:textColor="#FFFFFF"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:gravity="left">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="App Version: 1.0.0\n\nJSCH Version: 0.1.55\n\nThis project is a port of JSCH to Android, aiming to provide an alternative to Trilead SSH2 with a focus on connection stability and better error handling, such as network drops and connection issues. It includes a payload injection service, supports HTTP, HTTPS, and SSL proxies, and provides port forwarding through JSCH.\n\nThe project utilizes PDNSD and tun2socks, and leverages Android's VPN service for a more robust VPN experience. The proxy system supports multiple types of connections, including direct connection, HTTP proxies, SSL proxies, and SSL with HTTP proxies. It also supports multi-status connections, always attempting an HTTP 200 response and forcing the connection when needed.\n\nUnlike traditional services, most of the operations are handled using threads rather than only relying on services. This approach not only saves RAM but also increases performance, making the application faster and more efficient, with services being used only for notifications and the injection service.\n\nAdditionally, the app provides a basic system for exporting and importing configurations in JSON format (no encryption!), making it easier to test and manage settings."
+				android:textColor="#AAA6A6"
+				android:textSize="13sp"
+				android:layout_margin="5dp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

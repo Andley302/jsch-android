@@ -1,7 +1,7 @@
 
 # JSch Android - VPN Tunnel via SSH
 
-O **JSch Android** é um projeto que visa criar um túnel VPN utilizando a biblioteca JSch para SSH, com encaminhamento de porta (port forwarding) e suporte ao `pdnsd` e `tun2socks`, além de integrar o serviço de VPN do Android. O objetivo é oferecer uma alternativa ao **Trilead SSH2**, que é comumente utilizado em aplicativos de VPN baseados em SSH. Embora o JSch seja mais simples e menos atualizado, ele oferece estabilidade e desempenho competitivo, com foco em eficiência no uso de memória e maior contro...
+O **JSch Android** é um projeto que visa criar um túnel VPN utilizando a biblioteca JSch para SSH, com encaminhamento de porta (port forwarding) e suporte ao `pdnsd` e `tun2socks`, além de integrar o serviço de VPN do Android. O objetivo é oferecer uma alternativa ao **Trilead SSH2**, que é comumente utilizado em aplicativos de VPN baseados em SSH. Embora o JSch seja mais simples e menos atualizado, ele oferece estabilidade e desempenho competitivo, com foco em eficiência no uso de memória.
 
 ## Características
 
